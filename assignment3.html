@@ -1,1 +1,103 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
+        <title>A3: Getting Started with Grasshopper!</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>A3: Getting Started with Grasshopper!</h1>
+            <p>
+            The first step of this assignment was to assemble my 3D printer; however, I am incredibly lucky in that many things in my life magically appear and/or work! <br>
+            Somehow, there was already a 3D printer built and ready to print at my place. Although, let's be honest. <br>
+            It really means I live with my highly capable significant other who is very skilled at engineering stuff. <br>
+            And as a gift for Xmas, he got a 3D printer. Anthony has been using it ever since then to fill our lovely office room with, PLA thingies. <br><br>
+            <img src="3DPrinter.jpg" width=300></a> <br><br><br>
+            
+            In lieu of building a 3D printer, I watched the 30-min video Anthony used to build his. <br>
+            While it certainly does not replace the experience of building a 3D printer myself, I have to give kudos to Tombof3DPrintingHorror on how well it articulated the whole build process. <br><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/me8Qrwh907Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br><br>
+            
+            We also made sure to go over the eccentric nuts, build plate level, and loose screws. <br>
+            In fact, Anthony probably had to go over each at least 5 times because it takes me a really long time to understand engineering stuff. But I got it! <br>
+            Below is his attempt at describing eccentric nuts. As you may notice, Anthony had to draw it several times because I was struggling to understand it...<br><br>
+            <img src="EccentricNuts.jpg" width=300><br><br><br>
+        
+            Afterwards, we got to the really fun stuff! He showed me all the accessories he has built for his 3D printer, using his 3D printer.<br>
+            1) There is a <a href="tool-holder.stl">tool holder</a> (for the Allen wrenches, wrenches, a screwdriver, end snips and spatula). <br>
+            2) There is a <a href="drawer.stl">tray/drawer</a> to store a bunch of miscellaneous things. <br>
+            3) There is a micro SD to SD card reader adapter - <a href ="adapter-front-plate.stl">front</a>, <a href ="adapter-back-plate.stl">back</a> (which houses <a href="https://www.amazon.com/gp/product/B01D9JIUU0/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1&fbclid=IwAR2tCl87XvJbIlKA-IHY9xlsRytxcE3rGjrfLr9zhgAFyFPLj-ecSdwa3HE"> this</a>). <br>
+            4) There is a <a href ="Zaxis-knob.stl">knob</a> that makes lifting the z-axis easier.<br>
+            5) There is a filament feed arm - <a href ="Filament-end-clip.stl">part A</a>, <a href = "Filament-guide-flat.stl">part B</a>. <br><br>
+            <img src="ToolHolder.jpg" width=150><img src="TrayDrawer.jpg" width=150><img src="SDCardReaderAdapter.jpg" width=150><img src="FilamentFeedKnob.jpg" width=150><br><br><br>
+            
+            And bonus! The googly eyes (though these weren't printed). It makes "Robi" that much cuter!<br><br>
+            <img src="GooglyEyes.jpg" width=300><br><br><br>
+        
+            The last thing I did was print a bed gap. As part of HCDE 533, I decided to purchase the recommended glass bed, which Anthony did not have (he had the standard magnetic bed). <br>
+            This was key to avoid having to adjust the printer each time we switched the beds, either by turning each bed level or raising/lowering the Z-axis end stop switch by same amount. <br>
+            Since I personally hadn't printed anything yet, there was bound to be an error right off the bat. Basically, I came across my failed print - curse you, 3D printing gods! I then leveled the bed... <br>
+            I had to select "Auto Home" and then "Disable Stepper Motors" on the screen. Using a piece of paper, I wedged it between the nozzle and bed, testing the resistance of each corner and adjusting the knobs.<br>
+            Once I adjusted the build plate level, I was able to print out the bed gap with no problem! Below I have what the bed gap looks like in Cura, the failed print, the bed leveling, and successful print!<br><br>
+            <img src="BedGap-CuraModel.jpg" width=150><img src="BedGap-FailedPrint.jpg" width=150><img src="BedGap-AdjustingBed.jpg" width=150><img src="BedGap-FinalPrint.jpg" width=150><br><br><br>
+            
+            Finally, I measured the bed gap to make sure it was the same between the difference of the glass and magnetic bed, and then attached it onto the 3D printer. <br>
+            I switched out the magnetic bed with the glass one, which meant I was finally ready to move onto the second part of the assignment!<br><br>
+            <img src="BedGap-Prod.jpg" width=300><br><br><br>
+        
+            The second step of this assignment was to test print and measure a bunch of things. Here's the collective crew of PLA thingies I printed per the Canvas assignment!<br><br>
+            <img src="AllShapes.jpg" width=300><br><br><br>
+        
+            <b> CUBE RESULTS </b><br>
+            <i> A 2cm cube with the standard "low quality" settings </i> <br>
+            Duration: 20 mins, X-20.16mm, Y-20.18mm, Z-20.00mm <br>
+            <i> A 2cm cube with the standard "standard quality" settings </i> <br>
+            Duration: 26 mins, X-20.07mm, Y-20.05mm, Z-20.04mm <br>
+            <i> A 2cm cube with the standard "super quality" settings </i> <br>
+            Duration: 48 mins, X-20.00mm, Y-20.00mm, Z-19.91mm <br><br>
+            <img src="CubeCrew.jpg" width=300><br><br><br>
+        
+            <b> CONCENTRIC CUBE RESULTS </b><br>
+            <i> A 2 cm cube with a concentric top and bottom layer and your favorite print setting from the previous cubes. </i> <br>
+            Setting: Low, Duration: 19 mins, X-20.08mm, Y-20.07mm, Z-19.86mm<br><br>
+            <img src="ConcentricCube.jpg" width=300><br><br><br>
+            
+            <b> TUBE & CYLINDER RESULTS </b><br>
+            <i> A tube 3cm in diameter and 3cm high with a single extrusion wall thickness </i> <br>
+            Duration: 17 mins, X-29.95mm, Y-29.95mm, Z-29.80mm <br>
+            <i> A tube 3cm in diameter and 3cm high with a double extrusion wall thickness and random z-seam alignment </i> <br>
+            Duration: 19 mins, X-29.96mm, Y-29.96mm, Z-29.96mm <br><br>
+            <i> A cylinder 3cm in diameter exported with a 0.1mm tolerance </i> <br>
+            Duration: 50 mins, X-29.75mm, Y-29.75mm, Z-30.00mm <br>
+            <i> A cylinder 3cm in diameter exported with a 0.001mm tolerance </i> <br>
+            Duration: 52 mins, X-29.90mm, Y-29.90mm, Z-30.00mm <br><br>
+            <i> A cylinder 3cm in diameter with special mode "spiralize outer contour" </i> <br>
+            Duration: 29 mins, X-30.06mm, Y-30.06mm, Z-30.06mm <br>
+            <i> A cylinder 3cm in diameter printed on its side with supports on </i> <br>
+            Duration: 56 mins, X-30.00mm, Y-30.00mm, Z-30.04mm <br><br> 
+            <img src="TubesCylinders.jpg" width=300><br><br><br>
+            
+            Oops! Here was a failed test print. Basically, the glass was too slippery, so I added some L'oreal hairspray to increase the stickiness of the bed surface. <br><br>
+            <img src="FailedPrint.jpg" width=300><br><br><br>
+        
+            <b> THE LAST SHAPE! </b><br>
+            <i> 20.0mm +/- 0.1mm cube with a 10.0mm +/- 0.1mm hole through it </i> <br>
+            I printed my first cube, which failed to meet the 0.1mm tolerance, especially the hole size. <br>
+            I realized I needed to adjust the hole size in Rhino because my 3D printer was printing ~0.5mm more (or less?) than I wanted to. <br>
+            I adjusted, and the final results were closer (but not <i> exactly </i> within the 0.1mm tolerance)<br><br>
+            Duration: 29 mins, X-20.07mm, Y-20.08mm, Z-19.97mm, Hole-9.81mm <br><br>
+            <img src="SquareWithHole.jpg" width=300><br><br><br>
+            
+   
+          
+            </p>
+        </div>
+        
+    </body>
+</html>
