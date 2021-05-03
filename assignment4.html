@@ -16,12 +16,26 @@
             <p>
             For <b> Part 1</b>, I modified two STLs into a printable STL for the assignment. <br><br>
             As a start, I needed to select two STLs, but had trouble choosing which objects to go with. I decided to use a random generator!<br><br>
-            <img src="A4-RandomGenerator.jpg" width=300></a> <br><br><br>
+            <img src="A4-RandomGenerator.jpg" width=300> <br><br><br>
         
-            Alright, snail shell and carrots it is! I went on Thingiverse to look for an STL of a snail shell and carrot. <br><br>
+            Alright, snail shell and carrots it is! I went on <a href="https://www.thingiverse.com/">Thingiverse</a> to look for an STL of a snail shell and carrot. <br><br>
             <img src="A4-SnailShellSTL.PNG" width=150><img src="A4-CarrotSTL.PNG" width=150><br>
             Credit to: <a href="https://www.thingiverse.com/thing:2551425?fbclid=IwAR2rCLPIYnov5g0Tx99i-rN0cmxRTdk7pp0kuz9oC3WjR-uMmohahKl6Kjk"> Alajaz</a> and <a href="https://www.thingiverse.com/thing:264448?fbclid=IwAR1fd6uhuAP48034VjRJx5H3urvwOivwbZuNy6Musy_oqxfYj4_KAIFkqnE"> wojtekgr</a><br><br><br>
           
+            I loaded the two STL files into Rhino. I "scale" both STLs down to ~1 inch and "reducemesh" the snail shell from 7,000 to 1,000 polygons. The carrot was already 1,000 polygons, so I didn't "reducemesh."<br>
+            Both were closed meshes. The next step was to check the meshes using "MeshRepair." The carrot mesh was good, but the snail shell mesh was bad. <br>
+            It was unclear why. I repaired the mesh, but it was still throwing me an error? <br><br>
+            <img src="A4-BadMesh.png" width=300> <br><br><br>
+                
+            I proceeded despite the error. Next, I used "meshtoNURB" to change from mesh to NURB. <br>
+            It was a success (and didn't take too long unlike what happened in class). I had two closed meshes and two closed polysurfaces! <br><br>
+            <img src="A4-MeshandNURB.png" width=300> <br><br><br>
+                
+            Finally, I "booleanunion" the two polysurfaces to create this Carrot-SnailShell STL. <br>
+            Despite the success, I still felt it was lacking because I never really resolved the error with the meshes...<br>
+            Oh well! It ended up looking like a snail with a unicorn horn though, hehe <br><br>
+            <img src="A4-FinalSTL.png" width=300> <br><br><br>
+            
             </p>
         </div>
         
