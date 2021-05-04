@@ -22,17 +22,30 @@
             <img src="A4-SnailShellSTL.PNG" width=150><img src="A4-CarrotSTL.PNG" width=150><br>
             Credit to: <a href="https://www.thingiverse.com/thing:2551425?fbclid=IwAR2rCLPIYnov5g0Tx99i-rN0cmxRTdk7pp0kuz9oC3WjR-uMmohahKl6Kjk"> Alajaz</a> and <a href="https://www.thingiverse.com/thing:264448?fbclid=IwAR1fd6uhuAP48034VjRJx5H3urvwOivwbZuNy6Musy_oqxfYj4_KAIFkqnE"> wojtekgr</a><br><br><br>
           
-            I loaded the two STL files into Rhino. I "scale" both STLs down to ~1 inch and "reducemesh" the snail shell from 7,000 to 1,000 polygons. The carrot was already 1,000 polygons, so I didn't "reducemesh."<br>
-            Both were closed meshes. The next step was to check the meshes using "MeshRepair." The carrot mesh was good, but the snail shell mesh was bad. <br>
-            It was unclear why. I repaired the mesh, but it was still throwing me an error? <br><br>
+            I loaded the two STL files into Rhino. First, I started with the snail shell. I "ReduceMesh"ed the snail shell from 7,000 to 1,000 polygons and confirmed it was a closed mesh.<br>
+            Next step was to check the mesh using "MeshRepair, which the wizard showed "this is a bad mesh." The error was that one face normal differed from the vertex normals (see below for screenshot).<br>
+            With the help of Google and <a href="https://discourse.mcneel.com/t/help-how-can-i-solve-this-problem-when-i-get-this-message-where-the-face-normal-differs-substantially-from-the-vertex-normals/11290?fbclid=IwAR2rqcMscY7rIFjH8cTRf8n3nIiI0WgxGBxE26ThCDy5Jeot5qhiTDKz5dE">Pascale Golay</a>, I was able to fix the issue by using "UnifyMeshNormals" and "RebuildMesh."
             <img src="A4-BadMesh.png" width=300> <br><br><br>
                 
-            I proceeded despite the error. Next, I used "meshtoNURB" to change from mesh to NURB. <br>
+            I re-ran "meshrepair," which fixed the above problem, but was still throwing an error.<br>
+            There were no naked edges, mesh holes, non-manifold mesh edges, issues with enclosed volume, etc...but the mesh "was self intersecting."<br>
+            I didn't really know how to isolate what was self intersecting, though eventually figured it out by selecting "All Edges" in "Edge Analysis."<br>
+            It seemed the shell was self-intersecting at the beginning and end of the shell. <br><br>
+            <img src="A4-HotMessShell.png" width=300> <br><br><br>
+                
+            I "Explode"ed the mesh and tried to manually move the points, though it just ended up creating a ton of naked edges.<br>
+            I also tried to create meshes using "FillMeshHoles," which seemed to have fixed the self-intersecting areas identified in "Edge Analysis."<br>
+            However, when I tried to "meshrepair," it still kept throwing the self-intersecting error. I couldn't find any additional self-intersecting issues using "Edge Analysis." <br>
+            This was a turning point for me because I was running out of time and the initial shell I selected was pretty complicated. Therefore, I decided to look for another shell STL file. <br><br><br>
+                
+            I found a different STL file and loaded it into Rhino. I "ReduceMesh" the snail shell to 1,000 polygons. I used "MeshRepair" and the mesh looked good!<br>
+            I also imported the carrot STL file. I used "MeshRepair" and everything seemed to be good. <br>
+            Next, I used "meshtoNURB" to change from mesh to NURB. <br>
             It was a success (and didn't take too long unlike what happened in class). I had two closed meshes and two closed polysurfaces! <br><br>
             <img src="A4-MeshandNURB.png" width=300> <br><br><br>
                 
-            Finally, I "booleanunion" the two polysurfaces to create this carrot-snailshell STL. Oh! And since I like making small objects, I "scale" it down yet again. <br>
-            Despite the success, I still felt it was lacking because I never really resolved the error with the meshes...<br>
+            Finally, I "booleanunion" the two polysurfaces to create this carrot-snailshell STL. <br>
+            I definitely felt pretty disappointed because I wasn't able to successfully fix the first shell STL file. I reflected long and hard on the process.<br>
             Oh well! It ended up looking like a snail with a unicorn horn though, hehe <br><br>
             <img src="A4-FinalSTL.png" width=300> <br><br><br>
             
