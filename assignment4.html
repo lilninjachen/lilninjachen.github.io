@@ -23,11 +23,11 @@
             Credit to: <a href="https://www.thingiverse.com/thing:2551425?fbclid=IwAR2rCLPIYnov5g0Tx99i-rN0cmxRTdk7pp0kuz9oC3WjR-uMmohahKl6Kjk"> Alajaz</a> and <a href="https://www.thingiverse.com/thing:264448?fbclid=IwAR1fd6uhuAP48034VjRJx5H3urvwOivwbZuNy6Musy_oqxfYj4_KAIFkqnE"> wojtekgr</a><br><br><br>
           
             First, I loaded the snail shell STL into Rhino. I "ReduceMesh"ed the snail shell from 7,000 to 1,000 polygons and checked that it was a closed mesh.<br>
-            After, I checked the mesh using "MeshRepair, which the wizard showed that it was "a bad mesh." Specifically, the error was that one of the face normal differed from the vertex normals (see below for screenshot).<br>
-            With the help of Google and <a href="https://discourse.mcneel.com/t/help-how-can-i-solve-this-problem-when-i-get-this-message-where-the-face-normal-differs-substantially-from-the-vertex-normals/11290?fbclid=IwAR2rqcMscY7rIFjH8cTRf8n3nIiI0WgxGBxE26ThCDy5Jeot5qhiTDKz5dE">Pascale Golay</a>, I was able to fix the issue by using "UnifyMeshNormals" and "RebuildMesh."<br><br>
+            After, I checked the mesh using "MeshRepair, which the wizard showed that it was "a bad mesh." Specifically, the error was that one of the face normal differed from the vertex normals.<br><br>
             <img src="A4-BadMesh.png" width=300> <br><br><br>
                 
-            I re-ran "meshrepair," which fixed the above problem, but was still throwing an error.<br>
+            With the help of Google and <a href="https://discourse.mcneel.com/t/help-how-can-i-solve-this-problem-when-i-get-this-message-where-the-face-normal-differs-substantially-from-the-vertex-normals/11290?fbclid=IwAR2rqcMscY7rIFjH8cTRf8n3nIiI0WgxGBxE26ThCDy5Jeot5qhiTDKz5dE">Pascale Golay</a>, I was able to fix the issue by using "UnifyMeshNormals" and "RebuildMesh."<br>
+            I re-ran "meshrepair," which fixed the above problem. However, it was still throwing an error.<br>
             There were no naked edges, mesh holes, non-manifold mesh edges, issues with enclosed volume, etc...but the mesh "was self intersecting."<br>
             I didn't really know how to isolate what was self intersecting, though eventually figured it out by selecting "All Edges" in "Edge Analysis."<br>
             It seemed the shell was self-intersecting at the beginning and end of the shell. <br><br>
