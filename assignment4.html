@@ -27,7 +27,7 @@
             <img src="A4-BadMesh.png" width=300> <br><br><br>
                 
             With the help of Google and <a href="https://discourse.mcneel.com/t/help-how-can-i-solve-this-problem-when-i-get-this-message-where-the-face-normal-differs-substantially-from-the-vertex-normals/11290?fbclid=IwAR2rqcMscY7rIFjH8cTRf8n3nIiI0WgxGBxE26ThCDy5Jeot5qhiTDKz5dE">Pascale Golay</a>, I was able to fix the issue by using "UnifyMeshNormals" and "RebuildMesh."<br>
-            I re-ran "meshrepair," which fixed the above problem. However, it was still throwing an error.<br>
+            I re-ran "MeshRepair," which fixed the above problem. However, it was still throwing an error.<br>
             There were no naked edges, mesh holes, non-manifold mesh edges, issues with enclosed volume, etc...but the mesh "was self intersecting."<br>
             I didn't really know how to isolate what was self intersecting, though eventually figured it out by selecting "All Edges" in "Edge Analysis."<br>
             It seemed the shell was self-intersecting at the beginning and end of the shell. <br><br>
@@ -35,22 +35,26 @@
                 
             I "Explode"ed the mesh and tried to manually move the points, though it just ended up creating a ton of naked edges.<br>
             I also tried to create meshes using "FillMeshHoles," which seemed to have fixed the self-intersecting areas identified in "Edge Analysis."<br>
-            However, when I tried to "meshrepair," it still kept throwing the self-intersecting error. I couldn't find any additional self-intersecting issues using "Edge Analysis." <br>
-            This was a turning point for me because I was running out of time and the initial shell I selected was pretty complicated. Therefore, I decided to look for another shell STL file. <br><br><br>
+            However, when I tried to "meshrepair," it still kept throwing the self-intersecting error. I couldn't find any additional self-intersecting issues using "Edge Analysis." <br><br><br>
+            
+            At this point, I was running out of time. The initial snail shell STL also seemed pretty complicated, so I decided to move on and look for another STL file. <br>
+            I found a different STL file for the snail shell and loaded it into Rhino. I "ReduceMesh" the snail shell to 1,000 polygons.<br><br>
+            <img src="A4-SnailShellv2.PNG" width=300><br>
+            Credit to: <a href="https://www.thingiverse.com/thing:38122">cerberus333</a><br><br><br>
                 
-            I found a different STL file and loaded it into Rhino. I "ReduceMesh" the snail shell to 1,000 polygons. I used "MeshRepair" and the mesh looked good!<br>
-            I also imported the carrot STL file. I used "MeshRepair" and everything seemed to be good. <br>
+            For my second item, I imported the carrot STL file. I didn't need to "ReduceMesh" because it was already at ~1,000 polygons.<br>
+            I ran "MeshRepair" and validated that both meshes were good.<br>
             Next, I used "meshtoNURB" to change from mesh to NURB. <br>
             It was a success (and didn't take too long unlike what happened in class). I had two closed meshes and two closed polysurfaces! <br><br>
             <img src="A4-MeshandNURB.png" width=300> <br><br><br>
                 
-            Finally, I "booleanunion" the two polysurfaces to create this carrot-snailshell STL. <br>
-            I definitely felt pretty disappointed because I wasn't able to successfully fix the first shell STL file. I reflected long and hard on the process.<br>
-            Oh well! It ended up looking like a snail with a unicorn horn though, hehe <br><br>
-            <img src="A4-FinalSTL.png" width=300> <br><br><br>
-            
-            The carrot-snailshell STL file is below: <br>
-            <a href="A4-CarrotSnailShell.stl">CarrotSnailShellSTL</a> <br><br><br>
+            Finally, I "booleanunion"ed the two polysurfaces to create the carrot-snailshell STL. <br>
+            I definitely felt disappointed and incomplete because of the first failed attempt at the snail shell. <br>
+            Although as I reflect on it, I was proud of the learning journey I went on. I used Google, tried troubleshooting, and even learned a few new commands! <br>
+            For example, we emphasized naked edges, mesh holes, etc. in class, but on my solo journey, I came across "UnifyMeshNormals" and "RebuildMesh." <br>
+            Anywho, here's the final STL product - a snail-a-corn (because it looks like a cross between a snail and a unicorn).
+            <img src="A4-FinalSTL.png" width=300><br>
+            <a href="A4-CarrotSnailShell.stl>The STL File</a> <br><br><br>
               
             </p>
         </div>
