@@ -22,9 +22,9 @@
             <img src="A4-SnailShellSTL.PNG" width=150><img src="A4-CarrotSTL.PNG" width=150><br>
             Credit to: <a href="https://www.thingiverse.com/thing:2551425?fbclid=IwAR2rCLPIYnov5g0Tx99i-rN0cmxRTdk7pp0kuz9oC3WjR-uMmohahKl6Kjk"> Alajaz</a> and <a href="https://www.thingiverse.com/thing:264448?fbclid=IwAR1fd6uhuAP48034VjRJx5H3urvwOivwbZuNy6Musy_oqxfYj4_KAIFkqnE"> wojtekgr</a><br><br><br>
           
-            I loaded the two STL files into Rhino. First, I started with the snail shell. I "ReduceMesh"ed the snail shell from 7,000 to 1,000 polygons and confirmed it was a closed mesh.<br>
+            First, I loaded the snail shell STL into Rhino. I "ReduceMesh"ed the snail shell from 7,000 to 1,000 polygons and confirmed it was a closed mesh.<br>
             Next step was to check the mesh using "MeshRepair, which the wizard showed "this is a bad mesh." The error was that one face normal differed from the vertex normals (see below for screenshot).<br>
-            With the help of Google and <a href="https://discourse.mcneel.com/t/help-how-can-i-solve-this-problem-when-i-get-this-message-where-the-face-normal-differs-substantially-from-the-vertex-normals/11290?fbclid=IwAR2rqcMscY7rIFjH8cTRf8n3nIiI0WgxGBxE26ThCDy5Jeot5qhiTDKz5dE">Pascale Golay</a>, I was able to fix the issue by using "UnifyMeshNormals" and "RebuildMesh."
+            With the help of Google and <a href="https://discourse.mcneel.com/t/help-how-can-i-solve-this-problem-when-i-get-this-message-where-the-face-normal-differs-substantially-from-the-vertex-normals/11290?fbclid=IwAR2rqcMscY7rIFjH8cTRf8n3nIiI0WgxGBxE26ThCDy5Jeot5qhiTDKz5dE">Pascale Golay</a>, I was able to fix the issue by using "UnifyMeshNormals" and "RebuildMesh."<br><br>
             <img src="A4-BadMesh.png" width=300> <br><br><br>
                 
             I re-ran "meshrepair," which fixed the above problem, but was still throwing an error.<br>
